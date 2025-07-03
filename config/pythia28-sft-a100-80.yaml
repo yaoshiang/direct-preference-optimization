@@ -1,0 +1,26 @@
+defaults:
+  - config
+  - _self_
+
+datasets: [hh]
+
+exp_name: anthropic_dpo_pythia28
+
+gradient_accumulation_steps: 8
+batch_size: 64
+eval_batch_size: 32
+trainer: BasicTrainer
+# sample_during_eva: false
+# model.fsdp_policy_m: bfloat16
+
+# python -u train.py 
+# model=pythia28 
+# datasets=[hh] 
+# loss=sft 
+# exp_name=anthropic_dpo_pythia28 
+# gradient_accumulation_steps=2 
+# batch_size=64 
+# eval_batch_size=32 
+# trainer=FSDPTrainer 
+# sample_during_eval=false 
+# model.fsdp_policy_mp=bfloat16
