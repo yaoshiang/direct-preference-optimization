@@ -89,7 +89,7 @@ Assistant: I don't know.
 Human: What planet in the solar system supports
 ```
 
-### Instruct SFT and Perferred-FT
+### Instruct SFT and Preferred-FT
 
 Perform Instruct SFT on Pythia 2.8B base using the chosen responses from Anthropic HH with a single A100 80GB. This process, model, and dataset are all referred to as "Preferred-FT" in the DPO paper. 
 
@@ -136,7 +136,7 @@ loss.beta=0.1 \
 exp_name=anthropic_dpo_pythia28 \
 gradient_accumulation_steps=16 \
 batch_size=64 \
-eval_batch_size=32 \
+eval_batch_size=16 \
 trainer=BasicTrainer \
 # sample_during_eval=false \
 # model.fsdp_policy_mp=bfloat16 \
